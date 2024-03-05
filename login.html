@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Shop - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="login-container">
+    <h2>Login to Shoes Shop</h2>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter user id or mobile no.">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Password">
+
+        <button type="button" onclick="login()">Login</button> <br>
+        <button type="button">Forget password</button>
+    </form>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Perform basic client-side validation
+        if (username === '' || password === '') {
+            alert('Please enter both username and password.');
+            return;
+        }
+        
+        // In a real application, you would send the data to a server for validation
+        // Here, we'll just show an alert assuming the login is successful
+        alert('Login successful. Redirecting to the shoe shop...');
+        // You can redirect the user to the main page or perform other actions as needed.
+    }
+</script>
+
+</body>
+</html>
